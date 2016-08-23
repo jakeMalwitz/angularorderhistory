@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <title>Angular Order History App</title>
+    <script src="/public/vendor/angular.min.js"></script>
+    <script src="/public/scripts/clientside.js"></script>
+    <link rel="stylesheet" href="/public/styles/stylesheet.css"/>
+
+<body>
+
+
+  <div ng-controller="IndexController">
+      <div class="mainContainer">
+
+
+        <div class="customerList">
+          <ul>
+            <li ng-click="customerClick()" ng-repeat="customer in customerList" class="customerInList">{{customer.first_name}}{{customer.last_name}}</li>
+          </ul>
+        </div>
+
+        <div class="orderList">
+
+          <ul>
+            <li ng-repeat="order in orders" class="ordersInList">Product:{{order.description}}Price:{{order.unit_price}}Amount:{{order.quantity}}
+            <p> Ship To: {{order.address_type}}: {{order.street}}{{order.city}}{{order.state}}//{{order.zip}}</p>
+            <p>Order Total: ${{order.quantity * order.unit_price}}</p></li>
+
+          </ul>
+
+        </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

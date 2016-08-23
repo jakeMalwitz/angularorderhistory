@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <title>Angular Order History App</title>
+    <script src="/public/vendor/angular.min.js"></script>
+    <script src="/public/scripts/clientside.js"></script>
+    <link rel="stylesheet" href="/public/styles/stylesheet.css">
+
+<body>
+
+
+  <div ng-controller="IndexController">
+    <h1>&Omicron; Angular</h1>
+
+    <p>Count: {{people.length}}</p>
+    <div ng-if="people.length < 5">
+      <button ng-click="addPerson()">Add Person</button>
+  </div>
+
+
+
+
+    <button ng-click="people.shift()">Remove Person</button>
+
+    <div ng-repeat="person in people">
+      <p>{{person.firstname}}</p>
+      <p>{{person.lastname}}</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.mainContainer{
+  width: 900px;
+  height: 900px;
+  margin: auto;
+}
+
+.customerList{
+  width:300px;
+  height: 900px;
+  float:left;
+  background-color: lightblue;
+}
+
+.orderList{
+  width: 600px;
+  height: 900px;
+  float:right;
+  background-color: papayawhip;
+}
